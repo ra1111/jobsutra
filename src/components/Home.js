@@ -24,7 +24,7 @@ const Home = () =>{
           <h1 class="home-banner__title text-semi-bold visible-xs-block"style={{ color: 'white' }}>Do More With Less!</h1>
           <h3 class="home-banner__title text-semi-bold hidden-xs" style={{ color: 'white' ,fontSize:'27px'}}>We at JobSutra understand how important each hire is for a growing company.<br/><br/> JobSutra uses predictive alogorithm to find the right fit for your company</h3>
           <h1 class="home-banner__desc hidden-xs" style={{ color: 'white' }}>Hire Faster, Hire Smarter</h1>
-          <a type="button" class="home-banner__cta btn-request-demo" href="/contact/" onclick="ga('send', 'event', 'Website', 'click', 'demo signup 1');">Request A Demo</a>
+          <a type="button" class="home-banner__cta btn-request-demo" href="/#/contact/" onclick="ga('send', 'event', 'Website', 'click', 'demo signup 1');">Request A Demo</a>
         </div>
       </div>
     </div>
