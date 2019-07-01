@@ -1,8 +1,53 @@
-import React from 'react'
+import React,{Component} from 'react'
 import { CSSTransitionGroup } from 'react-transition-group'
+import Axios from 'axios'
 import '../styles/workStyle.css'
+class Works extends Component {
 
-const Works = () => {
+  constructor () {
+    super()
+    this.state = {
+      formControls: {
+      email: { value: ''},
+      name:{ value: ''},
+      subject:{ value: ''},
+      message:{ value: ''}
+    }
+  }
+  }
+  submit(e)
+  {
+    const data = { name:this.state.formControls.name.value ,email:this.state.formControls.email.value, message:this.state.formControls.message.value };
+
+    Axios.post("https://us-central1-jobsutra-fc44a.cloudfunctions.net/submit", data)
+        .then(res => {
+            // here will be code
+        })
+        .catch(error => {
+            console.log(error);
+        });
+  }
+  
+  changeHandler = event => {
+      
+    const name = event.target.name;
+    const value = event.target.value;
+  
+    this.setState({
+      formControls: {
+          ...this.state.formControls,
+          [name]: {
+          ...this.state.formControls[name],
+          value
+        }
+      }
+    });
+}
+
+
+
+  render() {
+
   return (
     <CSSTransitionGroup
       transitionName="worksTransition"
@@ -43,21 +88,22 @@ const Works = () => {
         </div>
         <div class="row block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-white p-5 contact-form">
+            <form  class="bg-white p-5 contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name"/>
+                <input type="text" name="name" value={this.state.formControls.name.value}
+                     onChange={this.changeHandler} class="form-control" placeholder="Your Name"/>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email"/>
+                <input type="email" name="email" value={this.state.formControls.email.value}
+                     onChange={this.changeHandler}
+                  class="form-control" placeholder="Your Email"/>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject"/>
+                <textarea  id="" name="message" value={this.state.formControls.message.value}
+                     onChange={this.changeHandler} cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5"/>
+                <input type="submit" onClick={(e)=>this.submit(e)}  value="Send Message" class="btn btn-primary py-3 px-5"/>
               </div>
             </form>
           
@@ -73,5 +119,7 @@ const Works = () => {
     </CSSTransitionGroup>
   )
 }
+}
+
 
 export default Works
