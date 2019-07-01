@@ -32,7 +32,7 @@ const Works = () => {
             <p><span>Address:</span> Directorate of Distance Education Magadh University Campus, Turi Buzurg, Bihar 824234</p>
           </div>
           <div class="col-md-3">
-            <p><span>Phone:</span> <a href="tel://1234567920">+91 8789666856/7358606486/8587098397</a></p>
+            <p><span>Phone:</span> <a href="tel://1234567920">8789666856/7358606486/8587098397</a></p>
           </div>
           <div class="col-md-3">
             <p><span>Email:</span> <a href="mailto:mail.jobsutra@gmail.com">mail.jobsutra@gmail.com</a></p>

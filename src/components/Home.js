@@ -37,8 +37,8 @@ const Home = () =>{
             <div class="media block-6 services d-block">
               <div class="icon"> <FontAwesomeIcon   color="white" style={{stroke: "2px",strokeColor: "red"}} size="4x" icon={faSearch}/></div>
               <div class="media-body">
-                <h3 class="heading mb-3">Search Millions of Jobs</h3>
-                <p style={{width:'200px'}}> A small river named Duden flows by their place and supplies.</p>
+                <h3 class="heading mb-3">Find the Right Job</h3>
+                <p style={{width:'200px'}}> Finding the right job can be a daunting task. Find the right job that suits you.</p>
               </div>
             </div>      
           </div>
@@ -47,7 +47,7 @@ const Home = () =>{
               <div class="icon"> <FontAwesomeIcon  color="white" size="4x" icon={faCoffee}/></div>
               <div class="media-body">
                 <h3 class="heading mb-3">Easy To Manage Jobs</h3>
-                <p style={{width:'200px'}}>A small river named Duden flows by their place and supplies.</p>
+                <p style={{width:'200px'}}>Manage jobs through an easy to use job console.</p>
               </div>
             </div>    
           </div>
@@ -56,7 +56,7 @@ const Home = () =>{
               <div class="icon"> <FontAwesomeIcon  color="white" size="4x" icon={faRocket}/></div>
               <div class="media-body">
                 <h3 class="heading mb-3">Top Careers</h3>
-                <p style={{width:'200px'}}>A small river named Duden flows by their place and supplies.</p>
+                <p style={{width:'200px'}}>See which jobs have the best salaries and which jobs have the most job security.</p>
               </div>
             </div>      
           </div>
@@ -65,14 +65,14 @@ const Home = () =>{
               <div class="icon"> <FontAwesomeIcon  color="white" size="4x" icon={faUserTie}/></div>
               <div class="media-body">
                 <h3 class="heading mb-3">Search Expert Candidates</h3>
-                <p style={{width:'200px'}}>A small river named Duden flows by their place and supplies.</p>
+                <p style={{width:'200px'}}>Today, candidates have far more power during the job search and are hopping jobs frequently.</p>
               </div>
             </div>      
           </div>
         </div>
       </div>
     </section>
-    <section class="ftco-section img"  style={{backgroundImage: `url(${require('../Assets/images/bg_1.jpg')})`, backgroundPosition:"top center",backgroundSize:"cover",backgroundRepeat:"no-repeat"}}>
+    {/* <section class="ftco-section img"  style={{backgroundImage: `url(${require('../Assets/images/bg_1.jpg')})`, backgroundPosition:"top center",backgroundSize:"cover",backgroundRepeat:"no-repeat"}}>
     	<div class="sectionContainer">
     		<div class="row">
     			<div class="col-md-6">
@@ -85,7 +85,7 @@ const Home = () =>{
     			</div>
     		</div>
     	</div>
-    </section>
+    </section> */}
 
   </CSSTransitionGroup>
   )
