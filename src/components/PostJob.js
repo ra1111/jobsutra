@@ -12,7 +12,10 @@ const arrowOpen = <span className="arrow-open" />;
 class PostJob extends Component {
   constructor() {
     super();
-    Firebase.initializeApp(config);
+    if (!Firebase.apps.length) {
+      Firebase.initializeApp(config);
+  }
+   
     this.state = {
       formControls: {
         email: { value: "" },
@@ -26,6 +29,7 @@ class PostJob extends Component {
         name: { value: "" },
         phone: { value: "" },
         exp: { value: "" }
+
       },
       selected: "",
       errors: ""
@@ -51,7 +55,8 @@ class PostJob extends Component {
         skill: this.state.formControls.skill.value,
         phone: this.state.formControls.phone.value,
         exp: this.state.formControls.exp.value,
-        stipend:this.state.formControls.stipend.value
+        stipend:this.state.formControls.stipend.value,
+        type:this.state.selected
       };
       Firebase.database().ref('Jobs/').push({data});
     
