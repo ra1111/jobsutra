@@ -136,7 +136,7 @@ class PostJob extends Component {
         <div
           class="hero-wrap hero-wrap-2"
           style={{
-            backgroundImage: `url(${require("../Assets/images/bg_1.jpg")})`,
+            backgroundImage: `url(${require("../Assets/images/image_5.jpg")})`,
             backgroundPosition: "top center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat"
