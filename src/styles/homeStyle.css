@@ -15,6 +15,8 @@
     background-color: #ff6347;
     color: white;
     font-size: 16px;
+    max-width: 200px;
+    max-height: 68px;
     font-weight: 300;
     border-radius: 3px;
     text-transform: uppercase;
@@ -35,8 +37,10 @@
 }
 .home-banner__content {
     padding: 0 5%;
-    display: table-cell;
     vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .home-banner__desc {
     max-width: 564px;
@@ -66,11 +70,95 @@ h2, .h2 {
     font-size: 30px;
     line-height: 40px;
 }
+.slider-wrapper {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    width: '100%';
+    margin-top: 20px;
+  }
+  
 
 .ftco-section {
     padding: 7em 2.4em;
     position: relative;
 }
+.slider-content {
+    text-align: center;
+  }
+  
+  .slider-content .inner {
+    padding: 0 70px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  
+  .slider-content * {
+    pointer-events: none;
+  }
+  
+  .slider-content .inner button {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  
+  .slider-content .inner h1 {
+    font-weight: 900;
+    margin: 0 auto;
+    max-width: 840px;
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 1;
+  }
+  
+  .slider-content .inner p {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 20px auto 30px;
+    max-width: 640px;
+  }
+  
+  .slider-content section {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .slider-content section span {
+    color: #ffffff;
+  }
+  
+  .slider-content section span {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    display: inline-block;
+    text-align: left;
+    line-height: 1.4;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  
+  .slider-content section img {
+    width: 40px;
+    height: 40px;
+    border: solid 2px rgba(255, 255, 255, 0.5);
+    border-radius: 100%;
+    vertical-align: middle;
+  }
+  
+  .slider-content section span strong {
+    color: #ffffff;
+    font-size: 14px;
+    display: block;
+  }
 .bg-primary {
     background: #6c63ff !important;
 }

@@ -3,6 +3,8 @@ import { CSSTransitionGroup } from "react-transition-group";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/homeStyle.css";
 import { back } from "../Assets/images/bg_1.jpg";
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
 import {
   faCoffee,
   faSearch,
@@ -25,6 +27,7 @@ const Home = () => {
             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding"
             style={{ width: "100%", paddingRight: "1em", paddingTop: "0em" }}
           >
+          <Slider   infinite={true} className="slider-wrapper" autoplay={3000} >
             <div
               class="banner home-banner animate-banner"
               style={{
@@ -75,6 +78,139 @@ const Home = () => {
                 </a>
               </div>
             </div>
+            <div
+              class="banner home-banner animate-banner"
+              style={{
+                backgroundImage: `url(${require("../Assets/images/bg_1.jpg")})`,
+                backgroundPosition: "top center",
+                backgroundSize: "cover",
+                color: "#6c63ff",
+                width: "100%",
+                overflow: "hidden",
+                backgroundRepeat: "no-repeat"
+              }}
+              data-stellar-background-ratio="0.5"
+            >
+              <div class="home-banner__content">
+                <h1
+                  class="home-banner__title text-semi-bold visible-xs-block"
+                  style={{ color: "white", mixBlendMode: "difference" ,marginTop:'10rem'}}
+                >
+                 Are they Job ready?
+                </h1>
+                <h3
+                  class="home-banner__title text-semi-bold hidden-xs"
+                  style={{
+                    color: "white",
+                    mixBlendMode: "difference",
+                    fontSize: "27px"
+                  }}
+                >
+             
+                  <br /> GET MOST OUT OF <span>MILLENNIALS</span>
+                </h3>
+           
+                <a
+                  type="button"
+                  class="home-banner__cta btn-request-demo"
+                  href="/#/contact/"
+                  onclick="ga('send', 'event', 'Website', 'click', 'demo signup 1');"
+                >
+                  Request A Demo
+                </a>
+              </div>
+            </div>
+            <div
+              class="banner home-banner animate-banner"
+              style={{
+                backgroundImage: `url(${require("../Assets/images/image_1.jpg")})`,
+                backgroundPosition: "top center",
+                backgroundSize: "cover",
+                color: "#6c63ff",
+                width: "100%",
+                overflow: "hidden",
+                backgroundRepeat: "no-repeat"
+              }}
+              data-stellar-background-ratio="0.5"
+            >
+              <div class="home-banner__content">
+                <h1
+                  class="home-banner__title text-semi-bold visible-xs-block"
+                  style={{ color: "white", mixBlendMode: "difference" }}
+                >
+                HIGH-PERFORMING TEAMS
+                </h1>
+                <h1  class="home-banner__title text-semi-bold visible-xs-block"
+                  style={{ color: "white", mixBlendMode: "difference" }}> ARE NO ACCIDENT</h1>
+                <h3
+                  class="home-banner__title text-semi-bold hidden-xs"
+                  style={{
+                    color: "white",
+                    mixBlendMode: "difference",
+                    fontSize: "27px"
+                  }}
+                >
+             
+                  <br /> Build Teams that deliver with JobSutra
+                </h3>
+           
+                <a
+                  type="button"
+                  class="home-banner__cta btn-request-demo"
+                  href="/#/contact/"
+                  onclick="ga('send', 'event', 'Website', 'click', 'demo signup 1');"
+                >
+                  Request A Demo
+                </a>
+              </div>
+            </div>
+            <div
+              class="banner home-banner animate-banner"
+              style={{
+                backgroundImage: `url(${require("../Assets/images/image_4.jpg")})`,
+                backgroundPosition: "top center",
+                backgroundSize: "cover",
+                color: "#6c63ff",
+                width: "100%",
+                overflow: "hidden",
+                backgroundRepeat: "no-repeat"
+              }}
+              data-stellar-background-ratio="0.5"
+            >
+              <div class="home-banner__content">
+                <h1
+                  class="home-banner__title text-semi-bold visible-xs-block"
+                  style={{ color: "white", mixBlendMode: "difference" }}
+                >
+                SELECT THE
+                <span>  great  </span>
+                CANDIDATES, NOT JUST THE GOOD
+                </h1>
+                
+           
+                <h3
+                  class="home-banner__title text-semi-bold hidden-xs"
+                  style={{
+                    color: "white",
+                    mixBlendMode: "difference",
+                    fontSize: "27px"
+                  }}
+                >
+             
+                  <br /> Make data-driven hiring decisions
+                </h3>
+           
+                <a
+                  type="button"
+                  class="home-banner__cta btn-request-demo"
+                  href="/#/contact/"
+                  onclick="ga('send', 'event', 'Website', 'click', 'demo signup 1');"
+                >
+                  Request A Demo
+                </a>
+              </div>
+            </div>
+            </Slider>
           </div>
         </div>
       </div>
@@ -163,6 +299,7 @@ const Home = () => {
     		</div>
     	</div>
     </section> */}
+   
     </CSSTransitionGroup>
   );
 };
