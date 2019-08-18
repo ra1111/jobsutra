@@ -1,0 +1,12 @@
+.loginButton{
+    align-self:center;
+}
+.buttonWrapper{
+display: flex;
+justify-content: center
+}
+.loginWrapper{
+ display: inline-block;   
+ margin-left: 38%;
+ text-align: center;
+}

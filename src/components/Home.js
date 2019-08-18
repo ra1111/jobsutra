@@ -27,7 +27,7 @@ const Home = () => {
             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding"
             style={{ width: "100%", paddingRight: "1em", paddingTop: "0em" }}
           >
-          <Slider   infinite={true} className="slider-wrapper" autoplay={3000} >
+          <Slider   infinite={true} className="slider-wrapper" autoplay={false} >
             <div
               class="banner home-banner animate-banner"
               style={{
@@ -44,7 +44,8 @@ const Home = () => {
               <div class="home-banner__content">
                 <h1
                   class="home-banner__title text-semi-bold visible-xs-block"
-                  style={{ color: "white", mixBlendMode: "difference" }}
+                  style={{ color: "white", mixBlendMode: "difference" 
+                ,fontSize:"5vh !important"}}
                 >
                   Do More With Less!
                 </h1>
@@ -53,7 +54,7 @@ const Home = () => {
                   style={{
                     color: "white",
                     mixBlendMode: "difference",
-                    fontSize: "27px"
+                    fontSize: "3vh !important"
                   }}
                 >
                   We at JobSutra understand how important each hire is for a
@@ -64,7 +65,8 @@ const Home = () => {
                 </h3>
                 <h1
                   class="home-banner__desc hidden-xs"
-                  style={{ color: "white", mixBlendMode: "difference" }}
+                  style={{ color: "white", mixBlendMode: "difference" 
+                ,fontSize:"5vh !important"}}
                 >
                   Hire Faster, Hire Smarter
                 </h1>
@@ -94,7 +96,8 @@ const Home = () => {
               <div class="home-banner__content">
                 <h1
                   class="home-banner__title text-semi-bold visible-xs-block"
-                  style={{ color: "white", mixBlendMode: "difference" ,marginTop:'10rem'}}
+                  style={{ color: "white", mixBlendMode: "difference" 
+                  ,fontSize:"5vh !important",marginTop:'10rem'}}
                 >
                  Are they Job ready?
                 </h1>
@@ -103,7 +106,7 @@ const Home = () => {
                   style={{
                     color: "white",
                     mixBlendMode: "difference",
-                    fontSize: "27px"
+                    fontSize: "3vh !important"
                   }}
                 >
              
@@ -136,18 +139,21 @@ const Home = () => {
               <div class="home-banner__content">
                 <h1
                   class="home-banner__title text-semi-bold visible-xs-block"
-                  style={{ color: "white", mixBlendMode: "difference" }}
+                  style={{ color: "white", mixBlendMode: "difference" 
+                ,fontSize:"5vh !important"}}
                 >
                 HIGH-PERFORMING TEAMS
                 </h1>
                 <h1  class="home-banner__title text-semi-bold visible-xs-block"
-                  style={{ color: "white", mixBlendMode: "difference" }}> ARE NO ACCIDENT</h1>
+                  style={{ color: "white", mixBlendMode: "difference" 
+                  ,fontSize:"5vh !important"}}> ARE NO ACCIDENT</h1>
                 <h3
                   class="home-banner__title text-semi-bold hidden-xs"
                   style={{
                     color: "white",
                     mixBlendMode: "difference",
-                    fontSize: "27px"
+                    
+                    fontSize: "3vh !important"
                   }}
                 >
              
@@ -180,7 +186,8 @@ const Home = () => {
               <div class="home-banner__content">
                 <h1
                   class="home-banner__title text-semi-bold visible-xs-block"
-                  style={{ color: "white", mixBlendMode: "difference" }}
+                  style={{ color: "white", mixBlendMode: "difference" 
+                ,fontSize:"5vh !important"}}
                 >
                 SELECT THE
                 <span>  great  </span>
@@ -193,7 +200,8 @@ const Home = () => {
                   style={{
                     color: "white",
                     mixBlendMode: "difference",
-                    fontSize: "27px"
+                    
+                    fontSize: "3vh !important"
                   }}
                 >
              

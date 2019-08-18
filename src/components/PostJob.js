@@ -3,7 +3,7 @@ import Dropdown from "react-dropdown";
 import config  from "../Firebase";
 import { CSSTransitionGroup } from "react-transition-group";
 import Axios from "axios";
-import Firebase from 'firebase';
+import Firebase from '../Firebase';
 import "../styles/postStyle.css";
 const options = ["per month", "per week", "per year"];
 const arrowClosed = <span className="arrow-closed" />;
@@ -12,9 +12,9 @@ const arrowOpen = <span className="arrow-open" />;
 class PostJob extends Component {
   constructor() {
     super();
-    if (!Firebase.apps.length) {
-      Firebase.initializeApp(config);
-  }
+  //   if (!Firebase.apps.length) {
+  //     Firebase.initializeApp(config);
+  // }
    
     this.state = {
       formControls: {

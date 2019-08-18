@@ -2,10 +2,11 @@
 {
 .hero-wrap.hero-wrap-2 {
     background-position: top center !important;
+    
 }
 }
 .hero-wrap.hero-wrap-2 {
-    height: 600px !important;
+    height: 50vh !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;

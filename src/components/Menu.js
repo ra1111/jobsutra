@@ -15,7 +15,7 @@ const Menu = () =>{
       <li class="nav-item"><Link to="/contact">Contact Us</Link></li>
       {/* <li class="nav-item"><Link to="/about">About</Link></li> */}
     <li class="nav-item cta mr-md-1">< Link to="/post-job" class="nav-link">Post a Job</Link></li>
-	  {/*<li class="nav-item cta cta-colored"><a href="job-post.html" class="nav-link">Want a Job</a></li> */}
+	  <li class="nav-item cta cta-colored"><Link to="/student" class="nav-link">Want a Job</Link></li>
     </ul>
 	      </div>
 	    </div>
