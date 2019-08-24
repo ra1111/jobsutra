@@ -3,10 +3,30 @@
 }
 .buttonWrapper{
 display: flex;
-justify-content: center
+justify-content: space-around;
+flex-direction: column;
+height: 100%;
 }
 .loginWrapper{
  display: inline-block;   
  margin-left: 38%;
  text-align: center;
+}
+.wrapper{
+    width: 100vw;
+height: 100vh;
+}
+@media (max-width: 700.98px)
+{
+.cardWrapper{
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.card{
+    width: 50% !important;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
 }

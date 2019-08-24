@@ -1,0 +1,41 @@
+.card {
+    width: 30%;
+    height: 20rem;
+    box-shadow: 1px 1px 8px -1px rgba(138,120,138,0.45) !important;
+    display: flex;
+    flex-direction: column;
+  };
+  .bullet {
+    display: 'inline-block';
+    margin: '0 2px';
+    transform: 'scale(0.8)'
+  };
+  .title {
+    font-size: 1rem;
+    padding-top: 0.5rem !important;
+    color: #212529 !important;
+    line-height: 1.5 !important;
+   
+  };
+  .pos {
+    margin-bottom: 12
+  }
+  .MuiCardContent-root {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+   
+}
+.cardFooter {
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0,0,0,0.03);
+    border-top: 1px solid rgba(0,0,0,0.125);
+    justify-content: center;
+}
+.cardBody
+{
+-webkit-box-flex: 1;
+flex: 1 1 auto;
+padding: 1.25rem !important;
+text-align: center;
+}

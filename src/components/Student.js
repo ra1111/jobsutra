@@ -3,6 +3,7 @@ import {FontIcon, RaisedButton} from "material-ui";
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import firebase, { auth, provider } from '../Firebase';
 import '../styles/studentStyle.css'
+import CardClass from './CardContainer'
 
 export   default class Student extends React.Component{
     constructor() {
@@ -79,15 +80,16 @@ render() {
           </div>
         </div>
       </div>}
-    <div className="loginWrapper">
+    <div className={this.state.user?"wrapper":"loginWrapper"}>
     <h4>Login With Google</h4>
-    <div className="buttonWrapper">
-    {this.state.user ?<div> <div> You have logged in</div>
-    <div>
-    <div className='user-profile'>
-      <img src={this.state.user.photoURL} />
+   
+    {this.state.user ? <div className="buttonWrapper"> <div> You have logged in</div>
+    <div className="cardWrapper">
+    <CardClass header={"Your Profile"} body={"66% complete"} footer={"Complete your Profile"} payment={false}/>
+    <CardClass header={"JAT Score"} body={"You have not given JAT"} footer={"Upcoming JAT exam 15th September"} payment={false}/>
+    <CardClass header={"Register For JAT "} body={"Improve your chances of finding a right job"} payment={true} footer={"Register"}/>
     </div>
-  </div> <MuiThemeProvider>
+  <MuiThemeProvider> 
         <RaisedButton
             label="Logout"
             labelColor={"#ffffff"}
@@ -97,6 +99,7 @@ render() {
             onClick={this.logout}
         />
          </MuiThemeProvider> </div>:
+          <div className="buttonWrapper">
     <MuiThemeProvider>
         <RaisedButton
             label="Sign in with Google"
@@ -106,10 +109,10 @@ render() {
             icon={<FontIcon className="fa fa-google-plus" style={iconStyles}/>}
             onClick={this.login}
         />
-         </MuiThemeProvider>}
+         </MuiThemeProvider></div>}
     </div>
     </div>
-    </div>)
+    )
 }
 }
 
