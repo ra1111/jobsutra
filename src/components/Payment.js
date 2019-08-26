@@ -88,7 +88,7 @@ let that=this
     for (var property in fields) {
       if (fields.hasOwnProperty(property)) {
        
-if(this.state.workexp==="No")
+if(!this.state.isHidden)
 {
   if(property!=='company'&&property!=='months'&&property!=='role'&&property!=='isHidden'&&property!=='user')
   {  console.log(!fields[property],property,property!=='months')
@@ -163,6 +163,7 @@ branch:this.state.branch
   _onSelect(option) {
     console.log("You selected ", option.label);
     this.setState({ workexp: option, isHidden: !this.state.isHidden });
+    console.log(this.state.isHidden,"hidden")
   }
   handleChange =(evt)=> {
     // check it out: we get the evt.target.name (which will be either "email" or "password")
