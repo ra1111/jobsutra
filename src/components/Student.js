@@ -14,7 +14,9 @@ export   default class Student extends React.Component{
           currentItem: '',
           username: '',
           items: [],
-          user: null // <-- add this line
+          user: null,
+          email:"",
+          pic:"", // <-- add this line
         }
     }
     componentDidMount() {
@@ -85,9 +87,9 @@ render() {
    
     {this.state.user ? <div className="buttonWrapper"> <div> You have logged in</div>
     <div className="cardWrapper">
-    <CardClass header={"Your Profile"} body={"66% complete"} footer={"Complete your Profile"} payment={false}/>
-    <CardClass header={"JAT Score"} body={"You have not given JAT"} footer={"Upcoming JAT exam 15th September"} payment={false}/>
-    <CardClass header={"Register For JAT "} body={"Improve your chances of finding a right job"} payment={true} footer={"Register"}/>
+    {/* <CardClass header={"Your Profile"} body={"66% complete"} footer={"Complete your Profile"} payment={false}/>*/}
+    <CardClass header={"JAT Score"} body={"You have not given JAT"} footer={"Upcoming JAT exam 15th September"} payment={false}/> 
+    <CardClass header={"Register For JAT "} pic={this.state.user.photoURL} email={this.state.user.email} body={"Improve your chances of finding theright job"} payment={true} footer={"Click Here To Register"}/>
     </div>
   <MuiThemeProvider> 
         <RaisedButton

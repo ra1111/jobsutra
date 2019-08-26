@@ -301,7 +301,7 @@ class PostJob extends Component {
                       type="number"
                       name="phone"
                       value={this.state.formControls.phone.value}
-                      onChange={this.changeHandler}
+                      onChange={this.changdeHandler}
                       class="form-control"
                       placeholder="Enter Contact Number"
                     />

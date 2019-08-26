@@ -28,15 +28,16 @@ import "../styles/cardStyle.css";
                 </Typography>
               </CardContent>
               <CardActions className="cardFooter">
-                {!this.props.footer==="Register"?<Button size="small">{this.props.footer}</Button>:
+                {!this.props.footer==="Click Here To Register"?<Button size="small">{this.props.footer}</Button>:
                 <MuiThemeProvider>
         <RaisedButton
             label={this.props.footer}
             labelColor={"#ffffff"}
             className="loginButton"
-            backgroundColor={this.props.footer==='Register'?"#6c63ff":"#ff6347"} 
-          
-            onClick={ this.props.payment?()=> this.props.history.push('/payment'):null}
+            fullWidth={true}
+            backgroundColor={this.props.footer==='Click Here To Register'?"#6c63ff":"#ff6347"} 
+            disabled={this.props.footer==='Click Here To Register'?false:true}
+            onClick={ this.props.payment?()=> this.props.history.push({pathname:'/payment',state:{pic:this.props.pic,email:this.props.email}}):null}
         />
          </MuiThemeProvider>}
               </CardActions>

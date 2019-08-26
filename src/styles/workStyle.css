@@ -147,6 +147,7 @@ h2 {
 label {
     cursor: default;
     color: #000000;
+    width: 33%;
   }
 .p-5 {
     padding: 3rem !important;

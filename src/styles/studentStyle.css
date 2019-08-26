@@ -30,3 +30,7 @@ height: 100vh;
     margin-top: 10px;
 }
 }
+@media print{
+    width:100vw;
+    height: 50vh;
+}

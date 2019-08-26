@@ -3,6 +3,7 @@
     height: 20rem;
     box-shadow: 1px 1px 8px -1px rgba(138,120,138,0.45) !important;
     display: flex;
+    min-width: 240px;
     flex-direction: column;
   };
   .bullet {
@@ -31,6 +32,7 @@
     background-color: rgba(0,0,0,0.03);
     border-top: 1px solid rgba(0,0,0,0.125);
     justify-content: center;
+
 }
 .cardBody
 {
