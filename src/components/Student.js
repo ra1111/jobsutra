@@ -85,7 +85,7 @@ render() {
     <div className={this.state.user?"wrapper":"loginWrapper"}>
     <h4>Login With Google</h4>
    
-    {this.state.user ? <div className="buttonWrapper"> <div> You have logged in</div>
+    {this.state.user ? <div className="buttonWrapper"> 
     <div className="cardWrapper">
     {/* <CardClass header={"Your Profile"} body={"66% complete"} footer={"Complete your Profile"} payment={false}/>*/}
     <CardClass header={"JAT Score"} body={"You have not given JAT"} footer={"Upcoming JAT exam 15th September"} payment={false}/> 

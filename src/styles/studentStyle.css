@@ -1,5 +1,6 @@
 .loginButton{
     align-self:center;
+    margin: 10px;
 }
 .buttonWrapper{
 display: flex;
@@ -32,8 +33,13 @@ height: 100vh;
 {
 .cardWrapper{
     flex-direction: column;
+    height: 80vh;
+    
+}
+.buttonWrapper{
     overflow-y: scroll;
     overflow-x: hidden;
+    height: 90vh;
 }
 .card{
     width: 50% !important;

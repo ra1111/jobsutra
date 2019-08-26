@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Dropdown from "react-dropdown";
 import firebase, { auth, provider } from '../Firebase';
 import { FontIcon, RaisedButton } from "material-ui";
+import { withRouter } from 'react-router';
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import "../styles/postStyle.css";
 import { dark } from "../../node_modules/@material-ui/core/styles/createPalette";
@@ -17,7 +18,7 @@ const arrowOpen = (
   <span className="arrow-open-pay" style={{ bottom: "50px" }} />
 );
 let rootRef = firebase.database().ref();
-export default class Checkout extends React.Component {
+class Checkout extends React.Component {
 
   constructor() {
     super();
@@ -40,6 +41,7 @@ export default class Checkout extends React.Component {
     this.openCheckout = this.openCheckout.bind(this);
     this._onSelect = this._onSelect.bind(this);
     this.handleValidation=this.handleValidation.bind(this);
+    this.logout=this.logout.bind(this);
   }
   componentWillMount()
   {
@@ -63,6 +65,17 @@ let that=this
 
     document.body.appendChild(script);
   
+
+  }
+  logout()
+  {
+    auth.signOut()
+    .then(() => {
+      this.setState({
+        user: null
+      });
+      this.props.history.push('/')
+    });
 
   }
   changeAmount(e) {
@@ -105,7 +118,7 @@ if(this.state.workexp==="No")
 
   openCheckout() {
  
-console.log(this.props)
+
     if (this.handleValidation()) {
       const data = {
 address:this.state.address,
@@ -117,8 +130,8 @@ college:this.state.college,
 branch:this.state.branch
       }
       
-     console.log(data,"data")
-      console.log("THis is working");
+
+ 
     let options = {
       key: "rzp_live_wTLJa4lK2Y49fL",
       amount: 40000, // 2000 paise = INR 20, amount in paisa
@@ -127,7 +140,7 @@ branch:this.state.branch
       image: this.state.user.photoURL||"your pic",
       handler: function(response) {
         alert("You have sucessfully registered for JAT"+response.razorpay_payment_id);
-        
+        this.props.history.push('/')
         {this.state&&rootRef.child(`/users/${this.state.user.uid}`).update({basic:data,paid:"Yes",payment_id:response.razorpay_payment_id})}
       },
       prefill: {
@@ -264,14 +277,25 @@ branch:this.state.branch
               label="Register and Pay"
               labelColor={"#ffffff"}
               className="loginButton"
-              backgroundColor="#dd4b39"
-              icon={<FontIcon className="fa fa-google-plus" />}
+              backgroundColor="blue"
+          
               onClick={() => this.openCheckout()}
             />
           </MuiThemeProvider>
+          <MuiThemeProvider> 
+        <RaisedButton
+            label="Logout"
+            labelColor={"#ffffff"}
+            className="loginButton"
+            backgroundColor="#dd4b39"
+        
+            onClick={this.logout}
+        />
+         </MuiThemeProvider> 
         </div>
       </div>
     );
   }
 }
 
+export default withRouter(Checkout)
