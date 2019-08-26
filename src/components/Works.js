@@ -74,7 +74,7 @@ class Works extends Component {
           </div>
           <div class="w-100"></div>
           <div class="col-md-3">
-            <p><span>Address:</span> Directorate of Distance Education Magadh University Campus, Turi Buzurg, Bihar 824234</p>
+            <p><span>Address:</span> 1st Floor, Industry House, Sinha Library Road, Patna, Bihar 800001</p>
           </div>
           <div class="col-md-3">
             <p><span>Phone:</span> <a href="tel://1234567920">8789666856/7358606486</a></p>
