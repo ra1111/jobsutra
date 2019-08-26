@@ -67,9 +67,9 @@ export   default class Student extends React.Component{
 render() {
 
     return (
-        <div>
+        <div style={{height:"100vh"}}>
       
-        {!this.state.user&& <div class="hero-wrap hero-wrap-2"  style={{backgroundImage: `url(${require('../Assets/images/Login.jpg')})`, backgroundPosition: 'center',
+        {/* {!this.state.user&& <div class="hero-wrap hero-wrap-2"  style={{backgroundImage: `url(${require('../Assets/images/Login.jpg')})`, backgroundPosition: 'center',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat'}} data-stellar-background-ratio="1">
         <div class="overlay"></div>
@@ -81,7 +81,7 @@ render() {
             </div>
           </div>
         </div>
-      </div>}
+      </div>} */}
     <div className={this.state.user?"wrapper":"loginWrapper"}>
     <h4>Login With Google</h4>
    
