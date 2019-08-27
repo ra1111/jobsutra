@@ -4,6 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import firebase, { auth, provider } from '../Firebase';
 import '../styles/studentStyle.css'
 import CardClass from './CardContainer'
+import Checkout from './Payment'
 
 export   default class Student extends React.Component{
     constructor() {
@@ -85,22 +86,26 @@ render() {
     <div className={this.state.user?"wrapper":"loginWrapper"}>
     <h4>Login With Google</h4>
    
-    {this.state.user ? <div className="buttonWrapper"> 
-    <div className="cardWrapper">
-    {/* <CardClass header={"Your Profile"} body={"66% complete"} footer={"Complete your Profile"} payment={false}/>*/}
-    <CardClass header={"JAT Score"} body={"You have not given JAT"} footer={"Upcoming JAT exam 15th September"} payment={false}/> 
-    <CardClass header={"Register For JAT "} pic={this.state.user.photoURL} email={this.state.user.email} body={"Improve your chances of finding theright job"} payment={true} footer={"Click Here To Register"}/>
-    </div>
-  <MuiThemeProvider> 
-        <RaisedButton
-            label="Logout"
-            labelColor={"#ffffff"}
-            className="loginButton"
-            backgroundColor="#dd4b39"
-            icon={<FontIcon className="fa fa-google-plus" style={iconStyles}/>}
-            onClick={this.logout}
-        />
-         </MuiThemeProvider> </div>:
+    {this.state.user ? 
+    <Checkout/>
+  //   <div className="buttonWrapper"> 
+  //   <div className="cardWrapper">
+    
+  //   {/* <CardClass header={"Your Profile"} body={"66% complete"} footer={"Complete your Profile"} payment={false}/>*/}
+  //   {/* <CardClass header={"JAT Score"} body={"You have not given JAT"} footer={"Upcoming JAT exam 15th September"} payment={false}/>  */}
+  //   {/* <CardClass header={"Register For JAT "} pic={this.state.user.photoURL} email={this.state.user.email} body={"Improve your chances of finding theright job"} payment={true} footer={"Click Here To Register"}/> */}
+  //   </div>
+  // <MuiThemeProvider> 
+  //       <RaisedButton
+  //           label="Logout"
+  //           labelColor={"#ffffff"}
+  //           className="loginButton"
+  //           backgroundColor="#dd4b39"
+  //           icon={<FontIcon className="fa fa-google-plus" style={iconStyles}/>}
+  //           onClick={this.logout}
+  //       />
+  //        </MuiThemeProvider> </div>
+         :
           <div className="buttonWrapper">
     <MuiThemeProvider>
         <RaisedButton

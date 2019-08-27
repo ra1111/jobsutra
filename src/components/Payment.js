@@ -119,18 +119,18 @@ if(!this.state.isHidden)
   openCheckout() {
  
 
-    if (this.handleValidation()) {
-      const data = {
-address:this.state.address,
-contact:this.state.contact,
-name:this.state.name,
-work:{company:this.state.company,months:this.state.months,role:this.state.role},
-workexp:this.state.workexp,
-college:this.state.college,
-branch:this.state.branch
-      }
+//     if (this.handleValidation()) {
+//       const data = {
+// address:this.state.address,
+// contact:this.state.contact,
+// name:this.state.name,
+// work:{company:this.state.company,months:this.state.months,role:this.state.role},
+// workexp:this.state.workexp,
+// college:this.state.college,
+// branch:this.state.branch
+//       }
       
-
+let that=this
  
     let options = {
       key: "rzp_live_wTLJa4lK2Y49fL",
@@ -140,8 +140,8 @@ branch:this.state.branch
       image: this.state.user.photoURL||"your pic",
       handler: function(response) {
         alert("You have sucessfully registered for JAT"+response.razorpay_payment_id);
-        this.props.history.push('/')
-        {this.state&&rootRef.child(`/users/${this.state.user.uid}`).update({basic:data,paid:"Yes",payment_id:response.razorpay_payment_id})}
+        that.props.history.push('/')
+     //   {this.state&&rootRef.child(`/users/${this.state.user.uid}`).update({basic:data,paid:"Yes",payment_id:response.razorpay_payment_id})}
       },
       prefill: {
         name: this.state.name,
@@ -157,7 +157,7 @@ branch:this.state.branch
 
     let rzp = new window.Razorpay(options);
     rzp.open();
-   }
+   
     
   }
   _onSelect(option) {
@@ -175,7 +175,7 @@ branch:this.state.branch
     return (
       <div>
         <div className="paymentWrapper">
-          <form  className="formWrapper">
+          {/* <form  className="formWrapper">
             <div className="form-container">
               <label className="form-label">Name </label>
               <input
@@ -272,8 +272,8 @@ branch:this.state.branch
       />
     </div>
   </div>}
-          </form>
-          <MuiThemeProvider>
+            </form> */}
+          <MuiThemeProvider> 
             <RaisedButton
               label="Register and Pay"
               labelColor={"#ffffff"}
