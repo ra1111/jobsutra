@@ -53,3 +53,51 @@ div {
     padding-right: 15px;
     padding-left: 15px;
 }
+@media only screen and (max-width: 991px) and (min-width: 676px)
+{
+.service {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 40px;
+}
+}
+.service {
+    min-height: 292px;
+    padding: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 6px 22px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 22px 6px rgba(0, 0, 0, 0.08);
+    background-color: transparent;
+    -webkit-transition: all 0.9s ease 0s;
+    transition: all 0.9s ease 0s;
+    border-radius: 1%;
+    height: 96%;
+}
+    @media (max-width: 768px)
+    {
+.rowAbout {
+    width: 90%;
+    flex-direction: column;
+  
+}
+    }
+.rowAbout {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20%;
+    display: flex;
+    
+}
+@media (min-width: 992px)
+{
+.container {
+    width: 90%;
+    
+}
+}
+img{
+max-width: 100%;
+height: auto;
+}
+    

@@ -11,34 +11,80 @@ const About = () => {
       transitionEnter={false}
       transitionLeave={false}>
       <div className="about">
-      <div class="hero-wrap hero-wrap-2" style={{backgroundImage: `url(${require('../Assets/images/bg_1.jpg')})`, backgroundPosition:"top center",backgroundSize:"cover",backgroundRepeat:"no-repeat"}} data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-start">
-          <div class="col-md-8 ftco-animate text-center text-md-left mb-5">
-          	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About</span></p>
-            <h1 class="mb-3 bread">About Us</h1>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <section class="ftco-section">
-    	<div class="container">
-    		<div class="row justify-content-center" >
-    			<div class="col-md-10">
-    				<div class="intro row text-center justify-content-center" style={{flexDirection:'column'}}>
-    					<div class="col-md-9" style={{marginLeft:'9em'}}>
-    					<img class="img-fluid" src={back} alt=""/>
-    					</div>
-    					<h2 class="mb-4">Welcome to JobSutra</h2>
-    					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-    					<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section>
+
+    <div class="rowAbout">
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="service">
+                <div class="panel__img"><img style={{borderRadius:"3%"}} src="https://www.gocrackit.com/wp-content/themes/sydney/images/home/our_services_images/career_conversation.jpeg"/>
+                </div>
+                 <a href="javascript:void(0);" onclick="show_career_conversation();"><h3>Career Guide</h3></a>
+            
+                
+                <ul class="fa-ul">
+                 <hr/>
+              <li><span class="fa-li"></span>Explore career opportunities in an industry</li>
+             
+              <hr/>
+              <li><span class="fa-li"></span>Understand strategy to enter &amp; grow in the industry</li>
+           
+               <hr/>
+              <li><span class="fa-li"></span>Understand key success factors in the industry </li>
+    
+               <hr/>
+              <li><span class="fa-li"></span>Understand the latest trends and nuances of the industry</li>
+              
+
+            </ul><br/><br/>
+          
+            
+            </div>
+        </div>
+    
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="service">
+              <div class="panel__img"><img style={{borderRadius:"3%"}}  src="https://www.gocrackit.com/wp-content/themes/sydney/images/home/our_services_images/resume review.jpeg"/></div>
+              <a href="javascript:void(0);" onclick="show_resume_review();"><h3>Resume Review</h3></a>
+              
+                <ul class="fa-ul">
+                <hr/>
+              <li><span class="fa-li"></span>Prepare structured and targeted resumes</li>
+              <hr/>
+              <li><span class="fa-li"></span>Understand gaps in resume and take corrective actions</li>
+              <hr/>
+              <li><span class="fa-li"></span>Identify the strengths and weaknesses of resume and anticipate likely questions</li>
+              <hr/>
+              <li><span class="fa-li"></span>Bring out the achievements and impact created clearly and crisply</li>
+              <hr/>
+            </ul><br/>
+   
+             </div>
+        </div>
+      
+         
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="service">
+                <div class="panel__img"><img style={{borderRadius:"3%"}} src="https://www.gocrackit.com/wp-content/themes/sydney/images/home/our_services_images/panel-interview.jpg"/></div>
+                   <a href="javascript:void(0);" onclick="show_mock_interview();">  <h3>Mock Interview</h3></a>
+              
+                
+      
+                <ul class="fa-ul">
+                    <hr/>
+              <li><span class="fa-li"></span>Practice interview with real industry experts</li>
+              <hr/>
+              <li><span class="fa-li"></span>Face a simulated interview and identify your own strengths and weaknesses</li>
+              <hr/>
+              <li><span class="fa-li"></span>Get detailed feedback by mentor on areas of improvement</li>
+              <hr/>
+              <li><span class="fa-li"></span>Get an insight on the kind of questions which may be asked</li>
+              <hr/>
+            </ul><br/>
+            </div>
+        </div>
+   
+    </div>
         </div>
     </CSSTransitionGroup>
   )
