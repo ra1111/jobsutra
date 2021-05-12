@@ -18,7 +18,7 @@
     "gh-pages": "^2.0.1",
     "http2": "^3.3.7",
     "material-ui": "^0.20.2",
-    "nodemailer": "^6.2.1",
+    "nodemailer": "^6.4.16",
     "path": "^0.12.7",
     "react": "^16.8.6",
     "react-animated-slider": "^1.1.4",
